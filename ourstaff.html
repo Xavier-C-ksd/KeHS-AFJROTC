@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Staff - Kennewick High School AFJROTC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      Kennewick High School AFJROTC
+      <span>Fly • Fight • Win</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="ourstaff.html">Our Staff</a></li>
+        <li><a href="asa.html">Activities</a></li>
+        <li><a href="goals.html">Goals</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Meet Our Staff</h1>
+    <p>Dedicated instructors shaping tomorrow's leaders.</p>
+  </main>
+
+  <section class="staff-section">
+    <h2>Our Instructors</h2>
+    <div class="staff-container" id="staff-container"></div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Kennewick High School AFJROTC | <a href="contact.html">Contact Us</a></p>
+  </footer>
+
+  <script>
+    fetch('staff.json')
+      .then(res => res.json())
+      .then(staffList => {
+        const container = document.getElementById('staff-container');
+        staffList.forEach(staff => {
+          container.innerHTML += `
+            <div class="staff-card">
+              <img src="${staff.image}" alt="${staff.name}" class="staff-img">
+              <div class="staff-name">${staff.name}</div>
+              <div class="staff-title">${staff.title}</div>
+            </div>
+          `;
+        });
+      })
+      .catch(err => console.error('Failed to load staff data:', err));
+  </script>
+</body>
+</html>
