@@ -19,7 +19,6 @@ body {
     backdrop-filter: blur(12px);
     position: fixed;
     width: calc(100vw - 40px);
-    height: 40px;
     z-index: 1000;
 }
 

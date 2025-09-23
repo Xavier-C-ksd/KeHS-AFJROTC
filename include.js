@@ -12,25 +12,30 @@ async function loadPart(id, file) {
           link.classList.add("active");
         }
       });
+
+      // If we just loaded the header, attach hamburger listener
+      if (id === "header") attachHamburger();
+      
     } catch (err) {
       console.error(`Failed to load ${file}:`, err);
     }
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  loadPart("header", "header.html");
-  loadPart("footer", "footer.html");
-});
-
-// Hamburger menu toggle for mobile
-document.addEventListener("DOMContentLoaded", () => {
+// Hamburger toggle function
+function attachHamburger() {
   const hamburger = document.getElementById("hamburger");
   const navMenu = document.getElementById("nav-menu");
 
   if (hamburger && navMenu) {
     hamburger.addEventListener("click", () => {
       navMenu.classList.toggle("active");
+      hamburger.classList.toggle("open"); // optional: for animated X
     });
   }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadPart("header", "header.html");
+  loadPart("footer", "footer.html");
 });
