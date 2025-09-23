@@ -7,22 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="logo">
-      Kennewick High School AFJROTC
-      <span>Fly • Fight • Win</span>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="ourstaff.html">Our Staff</a></li>
-        <li><a href="asa.html">Activities</a></li>
-        <li><a href="goals.html">Goals</a></li>
-        <li><a href="calendar.html">Group Calendar</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div id="header"></div>
 
   <main>
     <h1>Meet Our Staff</h1>
@@ -34,10 +19,8 @@
     <div class="staff-container" id="staff-container"></div>
   </section>
 
-  <footer class="footer">
-    <p>&copy; 2025 Kennewick High School AFJROTC | <a href="contact.html">Contact Us</a></p>
-  </footer>
-
+  <div id="footer"></div>
+  <script src="include.js"></script>
   <script>
     fetch('staff.json')
       .then(res => res.json())
@@ -46,7 +29,6 @@
         staffList.forEach(staff => {
           const card = document.createElement('div');
           card.classList.add('staff-card');
-
           card.innerHTML = `
             <div class="staff-front">
               <img src="${staff.image || 'https://via.placeholder.com/250x250.png?text=No+Image'}" alt="${staff.name}" class="staff-img">
@@ -57,7 +39,6 @@
               <p>${staff.info}</p>
             </div>
           `;
-
           container.appendChild(card);
         });
       })
