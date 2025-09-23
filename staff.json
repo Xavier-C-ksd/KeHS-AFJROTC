@@ -1,12 +1,20 @@
 [
   {
-    "name": "Lt Col. Curt Wichers",
+    "name": "Lt Col Curt Wichers",
     "title": "Senior Aerospace Science Instructor",
-    "image": "https://via.placeholder.com/250x250.png?text=John+Smith"
+    "image": "https://static.wixstatic.com/media/f1c8ae_1cfdf075830c447682504a17ef22dead.jpg/v1/fill/w_236,h_259,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f1c8ae_1cfdf075830c447682504a17ef22dead.jpg",
+    "info": "Lt Col Wichers is a retired Air Force officer dedicated to shaping cadets into strong leaders through discipline, teamwork, and excellence."
   },
   {
-    "name": "CMSgt. Luke Tohmpson",
+    "name": "CMSgt Luke Tohmpson",
     "title": "Aerospace Science Instructor",
-    "image": "https://via.placeholder.com/250x250.png?text=Jane+Doe"
+    "image": "https://via.placeholder.com/250x250.png?text=Jane+Doe",
+    "info": "CMSgt Tohmpson brings years of military experience and a passion for mentoring students to succeed in and out of the classroom."
+  },
+  {
+    "name": "C/Maj Bradon Combs",
+    "title": "Group Commander",
+    "image": "",
+    "info": "C/Maj Combs leads the cadet corps with integrity and a focus on building camaraderie among his peers."
   }
 ]
