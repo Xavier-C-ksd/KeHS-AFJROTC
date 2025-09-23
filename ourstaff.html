@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Staff - Kennewick High School AFJROTC</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <header class="header">
     <div class="logo">
@@ -48,17 +46,16 @@
           const card = document.createElement('div');
           card.classList.add('staff-card');
 
-          // front side (image + name + title)
           card.innerHTML = `
-          <div class="staff-front">
-            <img src="${staff.image || 'https://via.placeholder.com/250x250.png?text=No+Image'}" alt="${staff.name}" class="staff-img">
-            <div class="staff-name">${staff.name}</div>
-            <div class="staff-title">${staff.title}</div>
-          </div>
-          <div class="staff-back">
-            <p>${staff.info}</p>
-          </div>
-        `;
+            <div class="staff-front">
+              <img src="${staff.image || 'https://via.placeholder.com/250x250.png?text=No+Image'}" alt="${staff.name}" class="staff-img">
+              <div class="staff-name">${staff.name}</div>
+              <div class="staff-title">${staff.title}</div>
+            </div>
+            <div class="staff-back">
+              <p>${staff.info}</p>
+            </div>
+          `;
 
           container.appendChild(card);
         });
@@ -66,5 +63,4 @@
       .catch(err => console.error('Failed to load staff data:', err));
   </script>
 </body>
-
 </html>
